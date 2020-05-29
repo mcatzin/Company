@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TaskList = (props) => {
-  return props.TaskList.map((val, idx) => {
+  return props.taskList.map((val, idx) => {
     let quantity = `quantity-${idx}`,
       supplier = `supplier-${idx}`,
       description = `description-${idx}`,
