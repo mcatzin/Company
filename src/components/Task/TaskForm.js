@@ -72,8 +72,8 @@ class TaskForm extends React.Component {
     if (
       this.state.date === '' ||
       this.state.requester === '' ||
-      this.state.department ||
-      this.state.supervisor ||
+      this.state.department === '' ||
+      this.state.supervisor === '' ||
       this.state.vendor === ''
     ) {
       NotificationManager.warning(
@@ -85,7 +85,7 @@ class TaskForm extends React.Component {
       if (
         this.state.taskList[i].quantity === '' ||
         this.state.taskList[i].supplier === '' ||
-        this.state.taskList[i].description
+        this.state.taskList[i].description === ''
       ) {
         NotificationManager.warning('Please fill up required fields');
         return false;
@@ -168,7 +168,7 @@ class TaskForm extends React.Component {
                         <input
                           type="text"
                           name="vendor"
-                          id="vednor"
+                          id="vendor"
                           className="form-control"
                           placeholder="Enter Vendor Name"
                         />

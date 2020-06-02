@@ -59,7 +59,7 @@ const TaskList = (props) => {
           <select
             name="itemStatus"
             id={itemStatus}
-            data-in={idx}
+            data-id={idx}
             className="form-control"
           >
             <option value="Pending">Pending</option>
