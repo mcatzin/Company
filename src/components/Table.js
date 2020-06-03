@@ -1,5 +1,6 @@
 import React from 'react';
 import * as ReactBootStrap from 'react-bootstrap';
+
 const Table = () => {
   const data = [
     {
@@ -7,19 +8,28 @@ const Table = () => {
       name: 'Mario Catzin',
       date: '05/20/20',
       department: 'General',
+      status: 'Pending',
     },
-    { prf: '100', name: 'Jeff Golez', date: '4/22/20', department: 'HR' },
+    {
+      prf: '100',
+      name: 'Jeff Golez',
+      date: '4/22/20',
+      department: 'HR',
+      status: 'Hold',
+    },
     {
       prf: '99',
       name: 'Zak Hanns',
       date: '4/03/20',
       department: 'Maintenance',
+      status: 'Pending',
     },
     {
       prf: '98',
       name: 'Dwayne Nash',
       date: '4/02/20',
       department: 'Maintenance',
+      status: 'Completed',
     },
   ];
 
@@ -30,6 +40,7 @@ const Table = () => {
         <td>{data.name}</td>
         <td>{data.date}</td>
         <td>{data.department}</td>
+        <td>{data.status}</td>
       </tr>
     );
   };
@@ -42,6 +53,7 @@ const Table = () => {
             <th>Requester's Name</th>
             <th>Date</th>
             <th>Department</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>{data.map(renderData)}</tbody>

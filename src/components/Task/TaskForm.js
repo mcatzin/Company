@@ -1,5 +1,7 @@
 import React from 'react';
 import TaskList from './TaskList';
+import * as ReactBootStrap from 'react-bootstrap';
+import './TaskList.css';
 import {
   NotificationContainer,
   NotificationManager,
@@ -190,7 +192,11 @@ class TaskForm extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <table className="table">
+                    <ReactBootStrap.Table
+                      hover
+                      className="react-bootstrap-table"
+                      responsive
+                    >
                       <thead>
                         <tr>
                           <th className="required">Quantity</th>
@@ -225,7 +231,7 @@ class TaskForm extends React.Component {
                           </td>
                         </tr>
                       </tfoot>
-                    </table>
+                    </ReactBootStrap.Table>
                   </div>
                   <div className="card-footer text-center">
                     <button
