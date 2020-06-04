@@ -40,6 +40,9 @@ class Navbar extends React.Component {
           <li>
             <Link to="/table">Table</Link>
           </li>
+          <li>
+            <Link to="/approval">Approval</Link>
+          </li>
         </ul>
       </nav>
     );
